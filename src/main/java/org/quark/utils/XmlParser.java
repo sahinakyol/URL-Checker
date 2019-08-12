@@ -12,12 +12,12 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @ApplicationScoped
-public class XmlParser {
+public class XmlParser implements FileParser{
 
     private Logger logger = Logger.getLogger(XmlParser.class.getName());
 
     @ConfigProperty(name = "file.xml")
-    String fileUrl;
+    private String fileUrl;
 
     public List parser() {
         List list = new ArrayList();
