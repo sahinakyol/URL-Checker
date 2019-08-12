@@ -9,6 +9,7 @@ import java.net.ProtocolException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 @ApplicationScoped
 public class RequestService {
@@ -26,12 +27,12 @@ public class RequestService {
             HttpURLConnection con = null;
             try {
                 System.out.println("Requested to :"+ URLItem.toString());
-                con = (HttpURLConnection) url.openConnection();
+                con = (HttpURLConnection) Objects.requireNonNull(url).openConnection();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                con.setRequestMethod("GET");
+                Objects.requireNonNull(con).setRequestMethod("GET");
             } catch (ProtocolException e) {
                 e.printStackTrace();
             }
