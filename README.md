@@ -7,7 +7,7 @@ This project checking healt of url as using [QUARKUS](https://quarkus.io/) 🤘
 Java and Maven are adequate.Personally I prefer [SDKMAN](https://sdkman.io/) for sdkm.
 Please RTFM!!
 
-### Installing
+### Running
 
 ```
 $ mvn compile quarkus:dev
